@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  font-family: "Muli", sans-serif;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 50px 0 50px;
+}
+
+.messages li {
+  background-color: darksalmon;
+  color: #fff;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 15px;
+  align-self: flex-start;
+}
+
+.send-form {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+}
+
+.send-form input {
+  width: calc(100% - 100px);
+  padding: 12px;
+  line-height: 16px;
+  font-size: 16px;
+  font-family: "Muli", sans-serif;
+  border: 1px solid salmon;
+}
+
+.send-form button {
+  background-color: salmon;
+  border: 0;
+  color: #fff;
+  width: 100px;
+  font-size: 16px;
+  padding: 14px;
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.popup p {
+  margin: 5px 0;
+}
+
+.popup button {
+  background-color: salmon;
+  border: 0;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.popup-container.hide {
+  opacity: 0;
+  transition: opacity linear 0.5s;
+  z-index: 0;
+  display: none;
+}
